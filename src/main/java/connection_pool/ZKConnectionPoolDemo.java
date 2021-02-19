@@ -13,8 +13,8 @@ public class ZKConnectionPoolDemo {
                 try {
                     ZooKeeper zooKeeper = pool.getConnection();
                     //模拟业务处理时间
-                    Thread.sleep(10000);
-                    //pool.releaseConnection(zooKeeper);
+                    Thread.sleep(1000);
+                    pool.releaseConnection(zooKeeper);
                 } catch (InterruptedException e) {
                     e.printStackTrace();
                 } catch (Exception e) {
